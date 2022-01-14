@@ -9,7 +9,7 @@
         </template>
       </SectionTitle>
     </div>
-    <div class="px-6 py-4">
+    <div class="px-6 pb-4">
       <DataIterator :loading="getCityWeatherLoading" :items="getCityWeather">
         <template #loading>
           <Loading />
@@ -107,7 +107,7 @@
 <script>
 import toast from "@/utils/toast";
 import AutoCompleteCities from "./AutoCompleteCities";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 export default {
   components: {
     AutoCompleteCities,
@@ -158,6 +158,7 @@ export default {
             this.cityWeatherItems.unshift({
               ...x.consolidated_weather_today,
               title: x.title,
+              woeid: x.woeid,
             });
           });
         }
@@ -169,7 +170,9 @@ export default {
   },
   methods: {
     ...mapActions("cityWeather", ["addCityWeather"]),
-    deleteItemConfirm(item) {
+    ...mapMutations("cityWeather", ["DELETE_CITY_WEATHER"]),
+    async deleteItemConfirm(item) {
+      await this.DELETE_CITY_WEATHER(item.woeid);
       const index = this.cityWeatherItems.findIndex((x) => x.id === item.id);
       this.$delete(this.cityWeatherItems, index);
       this.dialogDelete = false;
