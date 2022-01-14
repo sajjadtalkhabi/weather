@@ -1,0 +1,240 @@
+//--------------------------------------------Red
+$Red: #ee3552;
+$RedShadow: rgba(255, 75, 90, 0.5);
+$RedBackground: #fff8f9;
+
+//--------------------------------------------Orange
+$Orange: #ff6b57;
+$OrangeShadow: rgba(255, 130, 46, 0.5);
+$OrangeBackground: #fff9f8;
+
+//--------------------------------------------Yellow
+$Yellow: #ffc107;
+$YellowShadow: rgba(234, 223, 131, 0.5);
+$YellowBackground: #fffcf7;
+
+//--------------------------------------------Gold
+$Gold: #d4ba96;
+$GoldShadow: rgba(234, 223, 131, 0.5);
+$GoldBackground: #f7eef3;
+
+//--------------------------------------------Purple
+$Purple: #ac3773;
+$PurpleShadow: rgba(172, 55, 115, 0.5);
+$PurpleBackground: #fff4f8;
+
+//--------------------------------------------Blue
+$Blue: #3498db;
+$BlueShadow: rgba(51, 152, 219, 1);
+$BlueBackground: #f2f9fd;
+
+//--------------------------------------------DarkBlue
+$DarkBlue: #04314b;
+$DarkBlueShadow: rgba(4, 49, 75, 0.6);
+$DarkBlueBackground: #ecf7ff;
+
+//--------------------------------------------Pink
+$Pink: #e94c8f;
+$PinkShadow: rgba(233, 76, 143, 0.14);
+$PinkBackground: #fbfffa;
+
+//--------------------------------------------Cyan
+$Cyan: #32c5d2;
+$CyanShadow: rgba(50, 197, 210, 0.32);
+$CyanBackground: #ecf9f9;
+
+//--------------------------------------------LightGray
+$LightGray: #eeeeee;
+$LightGrayShadow: rgba(107, 107, 107, 0.5);
+$LightGrayBackground: #eeeeee;
+
+//--------------------------------------------Gray
+$Gray: #797979;
+$GrayShadow: rgba(54, 54, 54, 0.5);
+$GrayBackground: #ffe5e9;
+
+//--------------------------------------------Brown
+$Brown: #8b4513;
+$BrownShadow: rgba(145, 81, 23, 0.5);
+$BrownBackground: #fff4ed;
+
+//--------------------------------------------Creme
+$Creme: #f8f4e8;
+$CremeShadow: rgba(145, 81, 23, 0.5);
+$CremeBackground: #fff4ed;
+
+//--------------------------------------------Black
+$Black: #2f353b;
+$BlackShadow: rgba(0, 0, 0, 0.5);
+$BlackBackground: #e8e8e87a;
+
+//--------------------------------------------White
+$White: #fff;
+$WhiteShadow: rgba(255, 255, 255, 0.2);
+$WhiteBackground: #ffe5e9;
+
+//--------------------------------------------Green
+$Green: #0d7e00;
+$GreenShadow: rgba(13, 126, 0, 0.35);
+$GreenBackground: #fbfffa;
+
+//--------------------------------------------Teal
+$Teal: #008080;
+$TealShadow: rgba(0, 137, 123, 0.2);
+$TealBackground: #e6ecec;
+
+//--------------------------------------------Silver
+$Silver: #e5e5e5;
+$SilverShadow: rgb(229, 229, 229, 0.2);
+$SilverBackground: #ffe5e9;
+
+$Colors: (
+    Red: $Red,
+    Orange: $Orange,
+    Yellow: $Yellow,
+    Gold: $Gold,
+    Purple: $Purple,
+    Blue: $Blue,
+    Green: $Green,
+    Cyan: $Cyan,
+    LightGray: $LightGray,
+    Gray: $Gray,
+    Brown: $Brown,
+    Black: $Black,
+    White: $White,
+);
+$colors: (
+    red: $Red,
+    orange: $Orange,
+    yellow: $Yellow,
+    gold: $Gold,
+    purple: $Purple,
+    blue: $Blue,
+    dark-blue: $DarkBlue,
+    green: $Green,
+    cyan: $Cyan,
+    light-gray: $LightGray,
+    gray: $Gray,
+    brown: $Brown,
+    black: $Black,
+    white: $White,
+    teal: $Teal,
+    silver: $Silver,
+);
+$Shadows: (
+    red: $RedShadow,
+    orange: $OrangeShadow,
+    yellow: $YellowShadow,
+    gold: $GoldShadow,
+    purple: $PurpleShadow,
+    blue: $BlueShadow,
+    dark-blue: $DarkBlueShadow,
+    green: $GreenShadow,
+    cyan: $CyanShadow,
+    gray: $GrayShadow,
+    "grey.lighten-3": $LightGrayShadow,
+    brown: $BrownShadow,
+    black: $BlackShadow,
+    white: $WhiteShadow,
+    teal: $TealShadow,
+    silver: $SilverShadow,
+);
+$backgrounds: (
+    red: $RedBackground,
+    orange: $OrangeBackground,
+    yellow: $YellowBackground,
+    gold: $GoldBackground,
+    purple: $PurpleBackground,
+    blue: $BlueBackground,
+    dark-blue: $DarkBlueBackground,
+    green: $GreenBackground,
+    cyan: $CyanBackground,
+    gray: $GrayBackground,
+    "grey.lighten-3": $LightGrayBackground,
+    brown: $BrownBackground,
+    black: $BlackBackground,
+    white: $WhiteBackground,
+    teal: $TealBackground,
+    silver: $SilverBackground,
+);
+:root {
+    /*-------------------------------------------Main Colors*/
+    --color-red: #ee3559;
+    --color-orange: #ff6b57;
+    --color-yellow: #ffc107;
+    --color-gold: #ddcfbb;
+    --color-purple: #ac3773;
+    --color-pink: #e94c8f;
+    --color-cyan: #32c5d2;
+    --color-blue: #1875bb;
+    --color-dark-blue: #04314b;
+    --color-green: #0d7e00;
+    --color-white: #fff;
+    --color-gray: #b1b1b1;
+    --color-smoky: #737373;
+    --color-brown: #915117;
+    --color-black: #000;
+    --color-dark: #000;
+    --color-light-gray: #e6e6e6;
+    --color-light-blue: #c9d3ec;
+    --color-link-hover: #181b31;
+    /*-------------------------------------------Main Background Colors*/
+    --color-bg-red: #fff8f9;
+    --color-bg-orange: #fff9f8;
+    --color-bg-yellow: #fff3de;
+    --color-bg-gold: #fffaf4;
+    --color-bg-purple: #f7ebf1;
+    --color-bg-blue: #ecf7ff;
+    --color-bg-dark-blue: #ecf7ff;
+    --color-bg-green: #fbfffa;
+    --color-bg-pink: #f3e7ed;
+    --color-bg-light-pink: #fdeaed;
+    --purple-bg-color: #ca3773;
+    --color-bg-cyan: #e4fdff;
+    --color-bg-white: #fff;
+    --color-bg-gray: #f1f1f1;
+    --color-bg-light-gray: #fafafae8;
+    --color-bg-smoky: #ededed;
+    --color-bg-brown: #ffe5e9;
+    --color-bg-black: #e8e8e87a;
+    --color-bg-modal-header: #f7f7f7;
+    /* -------------------------------------------Module Colors*/
+    /* -------------------------misc*/
+    --color-task: #ac3773;
+    --color-gallery: #000;
+    --color-sms: #ff6b57;
+    --color-authorize: #0d7e00;
+    /*-------------------------portfolio*/
+    --color-portfolio: #915117;
+    /*-------------------------CRM*/
+    --color-client: #32c5d2;
+    --color-clients: #45cfd9;
+    /*-------------------------blog*/
+    --color-blog-news: #ff6b57;
+    --color-blog-article: #000;
+    --color-blog-video: #32c5d2;
+    --color-blog-btn: #eafafb;
+    --color-blog-podcast: #ee3552;
+    --color-blog-videos: #ee3552;
+    /*-------------------------product*/
+    --color-product: #32c5d2;
+    --color-translation: #1875bb;
+    --color-brand: #ac3773;
+    --color-pricing-method: #ac3773;
+    --color-product-variation: #ffc107;
+    --color-product-option: #ddcfbb;
+    /*-------------------------service*/
+    --color-service: #ee3552;
+    /*-------------------------wms*/
+    --color-wms-incoming: #32c5d2;
+    --color-wms-outgoing: #ee3552;
+    --color-wms: #000;
+    /*-------------------------store*/
+    --color-store-product: #ee3552;
+    --color-store-service: #ff6b57;
+    --color-store-order: #32c5d2;
+    --color-store: #000;
+    /*-------------------------Order*/
+    --color-order: #32c5d2;
+    --color-shipping-fee: #ff6b57;
+}

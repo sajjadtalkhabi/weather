@@ -1,0 +1,232 @@
+.v-application {
+    font-family: "Montserrat-light", Fallback, sans-serif !important;
+    font-size: 16px !important;
+    color: var(--color-black) !important;
+    overflow: hidden;
+    background-repeat: no-repeat, repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+.En__f__m__eb {
+    font-family: "Montserrat-extrabold", sans-serif !important;
+}
+.En__f__ta {
+    font-family: "Barlow-el", sans-serif !important ;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none !important;
+}
+.h-100 {
+    height: 100% !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+.v-input .v-label {
+    font-family: "Montserrat-light" !important;
+    font-size: 14px !important;
+    color: #acacac !important;
+    font-weight: 100;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+.theme--light.v-text-field > .v-input__control > .v-input__slot:before,
+.theme--dark.v-text-field > .v-input__control > .v-input__slot:before {
+    background-color: var(--color-light-gray) !important;
+    border-color: var(--color-light-gray);
+}
+.v-text-field__slot input,
+.v-select__selections .v-select__selection,
+textarea {
+    font-family: "Montserrat-light", sans-serif;
+    font-size: 16px;
+    margin-bottom: 0 !important;
+}
+.v-input--is-focused .v-text-field__slot input::placeholder {
+    color: #acacac;
+    text-transform: uppercase;
+}
+.v-list-item__content,
+.v-select__slot input {
+    font-family: "Montserrat-light";
+}
+
+.v-select.v-select--chips .v-select__selections {
+    min-height: 33px !important;
+}
+
+.v-text-field__slot input,
+.v-select__selections input {
+    padding-bottom: 0 !important;
+}
+
+.v-input__prepend-inner .v-input__icon--prepend-inner {
+    position: absolute;
+    right: 0;
+}
+
+.v-input__prepend-inner .v-input__icon--prepend-inner .v-icon,
+.v-input__append-inner .v-input__icon .v-icon {
+    font-size: 17px;
+}
+
+.v-image.v-responsive.v-carousel__item.theme--light {
+    height: 800px !important;
+}
+
+.custom-input .v-label {
+    top: -25px !important;
+    font-size: 13px !important;
+    font-weight: 300;
+    right: -10px !important;
+    color: black;
+}
+
+.custom-input .v-label--active {
+    transform: none !important;
+    font-family: 10px !important;
+}
+
+.custom-input legend {
+    width: 0px !important;
+}
+
+.custom-input fieldset {
+    border-color: #ecd9b5 !important;
+}
+
+.custom-input .v-select__selection--comma {
+    overflow: initial !important;
+    font-weight: 300 !important;
+    font-size: 13px !important;
+}
+
+.v-text-field.no-error-msg .v-text-field__details {
+    display: none !important;
+}
+
+.v-text-field.no-error-msg + .validation__error {
+    display: none;
+}
+
+.v-text-field.no-error-msg .v-input__slot {
+    margin-bottom: 0px;
+}
+.no-error-msg .v-input .v-input__control .v-text-field__details {
+    display: none;
+}
+/* ---------------------------------- textfields ------------------------------*/
+.prefix .v-input__slot {
+    padding-right: 0px !important;
+    // overflow: hidden;
+    font-weight: 300;
+}
+.v-text-field.large-label .v-label {
+    font-size: 12px !important;
+}
+.prefix.custom-input .v-label,
+.custom-combobox .v-label {
+    right: 0px !important;
+}
+.prefix .v-text-field__prefix {
+    background-color: #ecd9b5;
+    min-width: 70px;
+    margin-top: 0px !important;
+    padding-top: 0px;
+    height: 100%;
+    max-height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prefix input {
+    padding-right: 10px;
+}
+
+.prefix input:focus .v-text-field__prefix {
+    color: black !important;
+}
+.prefix .v-input__icon {
+    height: 100%;
+}
+.custom-input.prefix.primary--text {
+    color: black !important;
+}
+.custom-input.prefix .primary--text {
+    color: black !important;
+    font-weight: 800;
+}
+
+.prefix .v-text-field__prefix {
+    font-weight: 800;
+}
+
+.v-text-field.no-error-msg.textarae .v-input__slot {
+    margin-bottom: 0px !important;
+}
+
+.v-textarea.no-error-msg .v-input__slot {
+    margin-bottom: 0 !important;
+}
+
+.v-textarea.no-error-msg .v-text-field__details {
+    display: none !important;
+}
+.v-text-field__suffix {
+    font-size: 10px !important;
+    color: var(--color-gray);
+    text-transform: uppercase !important;
+}
+.v-text-field input {
+    padding: 8px 0 2px !important;
+}
+/* ----------------------------------- selects ----------------------------------------------  */
+.custom-combobox {
+    height: 55.99px;
+}
+.custom-checkbox.v-input--checkbox .v-label {
+    font-size: 13px !important;
+}
+
+.custom-checkbox.v-input--checkbox .v-icon {
+    color: black !important;
+    font-size: 30px;
+}
+
+.custom-checkbox .primary--text {
+    color: black;
+}
+
+.custom-checkbox .v-input--selection-controls__input {
+    margin-left: 12px;
+}
+
+.custom-checkbox.with-textfield {
+    padding-top: 0px !important;
+}
+
+.custom-checkbox.with-textfield .v-input__control {
+    height: 22px !important;
+}
+
+.custom-checkbox .v-messages {
+    display: none !important;
+}
+
+/* -------------------- selections-controls alignment ------------------------------*/
+
+.v-input--selection-controls {
+    margin-top: 0px !important;
+    padding-top: 10px !important;
+}
+.v-input--checkbox .v-label {
+    font-size: 14px !important;
+}
+
+input::placeholder {
+    text-transform: uppercase;
+}
