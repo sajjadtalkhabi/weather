@@ -65,9 +65,11 @@
             </template>
             <!-- actions -->
             <template v-slot:item.actions="{ item }">
-              <v-icon color="red" @click.native="deleteItemConfirm(item)">
-                mdi-delete
-              </v-icon>
+              <v-btn text depressed plain>
+                <v-icon color="red" @click.native="deleteItemConfirm(item)">
+                  mdi-delete
+                </v-icon>
+              </v-btn>
             </template>
             <!-- no result  -->
             <template v-slot:no-result> Sorry, No Items Found! </template>
