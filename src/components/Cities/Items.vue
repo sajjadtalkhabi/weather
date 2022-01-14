@@ -106,6 +106,7 @@
 </template>
 <script>
 import toast from "@/utils/toast";
+import {ItemsStorage} from "@/utils/storage";
 import AutoCompleteCities from "./AutoCompleteCities";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 export default {
@@ -160,10 +161,11 @@ export default {
               title: x.title,
               woeid: x.woeid,
             });
-            localStorage.setItem(
-              "items",
-              JSON.stringify(this.cityWeatherItems)
-            );
+            // localStorage.setItem(
+            //   "items",
+            //   JSON.stringify(this.cityWeatherItems)
+            // );
+            ItemsStorage.save(this.cityWeatherItems)
           });
         }
       },
@@ -179,13 +181,13 @@ export default {
       await this.DELETE_CITY_WEATHER(item.woeid);
       const index = this.cityWeatherItems.findIndex((x) => x.id === item.id);
       this.$delete(this.cityWeatherItems, index);
+      // localStorage.setItem("items", JSON.stringify(this.cityWeatherItems));
+      ItemsStorage.save(this.cityWeatherItems)
       this.dialogDelete = false;
     },
   },
   created() {
-    this.cityWeatherItems = localStorage.getItem("items")
-      ? JSON.parse(localStorage.getItem("items"))
-      : [];
+   this.cityWeatherItems = ItemsStorage.get();
     console.log(this.cityWeatherItems);
   },
 };
