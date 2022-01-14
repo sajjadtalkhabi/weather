@@ -1,7 +1,7 @@
 <template>
   <v-card outlined class="h-100">
     <div class="px-6 mt-4">
-      <SectionTitle title="words" has-btn>
+      <SectionTitle title="city" has-btn>
         <template #header-btn>
           <div class="mt-n2">
             <AutoCompleteCities v-model="form" />

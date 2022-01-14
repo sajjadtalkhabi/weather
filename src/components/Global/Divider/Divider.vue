@@ -1,5 +1,5 @@
 <template>
-  <div class="main__title">
+  <div class="main__title d-flex justify-center align-center">
     <div class="main__title--title" :class="`${!subTitle ? 'withoutSub' : ''}`">
       <h1>{{ title }}</h1>
       <h6 v-if="subTitle">{{ subTitle }}</h6>
