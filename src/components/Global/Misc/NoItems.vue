@@ -11,18 +11,6 @@ export default {
   props: {
     src: { default: NoItem },
     textEn: { default: " NO ITEMS AVAILABLE " },
-    themeColor: { default: "black" },
-    btnText: { default: "ثبت اولین آیتم" },
-    btnIcon: { default: "cancel" },
-    modal: { default: null },
-    routeName: { default: null },
-    hasBtn: { default: true },
-  },
-  methods: {
-    emitClickEvent(e) {
-      this.modal ? this.$_openModal(this.modal) : null;
-      this.$emit("button-clicked", e);
-    },
   },
 };
 </script>
