@@ -1,5 +1,9 @@
 # weather
 
+### Allow to request
+```
+If you are local, first go to https://cors-anywhere.herokuapp.com/corsdemo and unlock access to the demo
+```
 ## Project setup
 ```
 npm install
