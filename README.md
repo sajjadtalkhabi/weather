@@ -1,4 +1,4 @@
-# champya
+# weather
 
 ## Project setup
 ```
