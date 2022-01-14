@@ -10,7 +10,7 @@
       </SectionTitle>
     </div>
     <div class="px-6 pb-4">
-      <DataIterator :loading="getCityWeatherLoading" :items="getCityWeather">
+      <DataIterator :loading="getCityWeatherLoading" :items="cityWeatherItems">
         <template #loading>
           <Loading />
         </template>
@@ -160,6 +160,10 @@ export default {
               title: x.title,
               woeid: x.woeid,
             });
+            localStorage.setItem(
+              "items",
+              JSON.stringify(this.cityWeatherItems)
+            );
           });
         }
       },
@@ -177,6 +181,12 @@ export default {
       this.$delete(this.cityWeatherItems, index);
       this.dialogDelete = false;
     },
+  },
+  created() {
+    this.cityWeatherItems = localStorage.getItem("items")
+      ? JSON.parse(localStorage.getItem("items"))
+      : [];
+    console.log(this.cityWeatherItems);
   },
 };
 </script>

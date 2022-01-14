@@ -18,7 +18,6 @@
       <slot name="no-items">
         <!-- todo : fix -->
         <no-items
-          src="/images/Global/Animated/Product.gif"
           title=""
           themeColor="product"
           :hasBtn="false"
@@ -29,7 +28,6 @@
       <slot name="no-results">
         <!-- todo : fix -->
         <no-items
-          src="/images/Global/Animated/NoResult.gif"
           textFa=" no items found! "
           textEn=" Sorry, No Items Found! "
           themeColor="product"

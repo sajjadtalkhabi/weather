@@ -7,6 +7,7 @@ import './utils/GlobalComponents';
 import "./styles/global.scss";
 import ApiService from '@/utils/axios/api';
 ApiService.init('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/');
+import '@/utils/axios/errorHandler';
 
 Vue.config.productionTip = false
 
