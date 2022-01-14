@@ -106,7 +106,7 @@
 </template>
 <script>
 import toast from "@/utils/toast";
-import {ItemsStorage} from "@/utils/storage";
+import { ItemsStorage } from "@/utils/storage";
 import AutoCompleteCities from "./AutoCompleteCities";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 export default {
@@ -142,12 +142,15 @@ export default {
       immediate: true,
       async handler() {
         if (Object.keys(this.form).length !== 0) {
-          await this.addCityWeather(this.form?.woeid);
           //   If it was previously registered
           if (this.cityWeatherItems.find((y) => y.title === this.form.title)) {
             return toast.error("This city has already been selected", "Error");
           }
-          this.cityWeatherItems = [];
+          await this.addCityWeather(this.form?.woeid);
+          this.cityWeatherItems.length
+            ? (this.cityWeatherItems += this.cityWeatherItems)
+            : (this.cityWeatherItems = []);
+
           this.getCityWeather.map((x) => {
             //   If had no information
             if (x.consolidated_weather_today === undefined) {
@@ -161,7 +164,7 @@ export default {
               title: x.title,
               woeid: x.woeid,
             });
-            ItemsStorage.save(this.cityWeatherItems)
+            ItemsStorage.save(this.cityWeatherItems);
           });
         }
       },
@@ -177,12 +180,12 @@ export default {
       await this.DELETE_CITY_WEATHER(item.woeid);
       const index = this.cityWeatherItems.findIndex((x) => x.id === item.id);
       this.$delete(this.cityWeatherItems, index);
-      ItemsStorage.save(this.cityWeatherItems)
+      ItemsStorage.save(this.cityWeatherItems);
       this.dialogDelete = false;
     },
   },
   created() {
-   this.cityWeatherItems = ItemsStorage.get();
+    this.cityWeatherItems = ItemsStorage.get();
   },
 };
 </script>

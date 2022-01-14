@@ -67,7 +67,7 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .main__title--title h1 {
-    font-size: 28px;
+    font-size: 43px;
     letter-spacing: 1px;
   }
   .main__title--title h1::after {
@@ -75,12 +75,12 @@ export default {
     height: 1px;
     background-color: var(--color-light-gray);
     content: "";
-    width: 200px;
+    width: 350px;
     margin: 0 auto;
   }
   .main__title--title h6 {
-    font-size: 8px;
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 }
 </style>

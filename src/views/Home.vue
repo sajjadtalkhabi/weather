@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div>
+    <div class="mt-1 mt-md-12">
       <Divider title="cities weather" subTitle="help you to know the weather" />
     </div>
-    <div class="mt-15">
+    <div class="mt-6 mt-md-15">
       <v-card outlined>
         <CitiesItems />
       </v-card>

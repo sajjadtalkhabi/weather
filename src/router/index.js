@@ -64,6 +64,6 @@ function beforeLoad() {
 }
 
 function setTitle(to) {
-    const DEFAULT_TITLE = "champya";
+    const DEFAULT_TITLE = "weather";
     document.title = to.meta.title || DEFAULT_TITLE;
 }

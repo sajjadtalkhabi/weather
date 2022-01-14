@@ -2,11 +2,11 @@
   <div class="section__title">
     <div :class="[{ 'd-flex align-center justify-space-between': hasBtn }]">
       <div
-        :class="`text-body text-sm-h6 section__title--title-${defaultColor}`"
+        :class="`hidden-xs-only text-body text-sm-h6 section__title--title-${defaultColor}`"
       >
         {{ title }}
       </div>
-      <div v-if="hasBtn">
+      <div v-if="hasBtn" :class="{ 'w-md-100': hasBtn }">
         <template>
           <slot name="header-btn"></slot>
         </template>
@@ -55,6 +55,9 @@ export default {
   .section__title div {
     font-size: 17px;
     letter-spacing: 2px !important;
+  }
+  .w-md-100 {
+    width: 100% !important;
   }
 }
 @import "@/Styles/setup/_variables";
