@@ -161,10 +161,6 @@ export default {
               title: x.title,
               woeid: x.woeid,
             });
-            // localStorage.setItem(
-            //   "items",
-            //   JSON.stringify(this.cityWeatherItems)
-            // );
             ItemsStorage.save(this.cityWeatherItems)
           });
         }
@@ -181,14 +177,12 @@ export default {
       await this.DELETE_CITY_WEATHER(item.woeid);
       const index = this.cityWeatherItems.findIndex((x) => x.id === item.id);
       this.$delete(this.cityWeatherItems, index);
-      // localStorage.setItem("items", JSON.stringify(this.cityWeatherItems));
       ItemsStorage.save(this.cityWeatherItems)
       this.dialogDelete = false;
     },
   },
   created() {
    this.cityWeatherItems = ItemsStorage.get();
-    console.log(this.cityWeatherItems);
   },
 };
 </script>
