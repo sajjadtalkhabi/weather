@@ -65,34 +65,7 @@
             </template>
             <!-- actions -->
             <template v-slot:item.actions="{ item }">
-              <v-dialog
-                v-model="dialogDelete"
-                max-width="500px"
-                :retain-focus="false"
-                v-if="dialogDelete"
-              >
-                <v-card>
-                  <v-card-title class="text-h5"
-                    >Are you sure you want to delete this item?</v-card-title
-                  >
-                  <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn
-                      color="blue darken-1"
-                      text
-                      @click="dialogDelete = false"
-                      >Cancel</v-btn
-                    >
-                    <v-btn
-                      color="blue lighten-1"
-                      @click="deleteItemConfirm(item)"
-                      >OK</v-btn
-                    >
-                    <v-spacer></v-spacer>
-                  </v-card-actions>
-                </v-card>
-              </v-dialog>
-              <v-icon color="red" @click="dialogDelete = true">
+              <v-icon color="red" @click.native="deleteItemConfirm(item)">
                 mdi-delete
               </v-icon>
             </template>
@@ -115,9 +88,9 @@ export default {
   },
   data: () => ({
     form: {},
+    inLocal: false,
     cityWeatherItems: [],
     search: "",
-    dialogDelete: false,
     headers: [
       {
         text: "title (city)",
@@ -147,10 +120,12 @@ export default {
             return toast.error("This city has already been selected", "Error");
           }
           await this.addCityWeather(this.form?.woeid);
-          this.cityWeatherItems.length
-            ? (this.cityWeatherItems += this.cityWeatherItems)
-            : (this.cityWeatherItems = []);
-
+          if (this.cityWeatherItems.length && this.inLocal) {
+            this.cityWeatherItems = ItemsStorage.get();
+          } else {
+            this.cityWeatherItems = [];
+            this.inLocal = false;
+          }
           this.getCityWeather.map((x) => {
             //   If had no information
             if (x.consolidated_weather_today === undefined) {
@@ -181,11 +156,13 @@ export default {
       const index = this.cityWeatherItems.findIndex((x) => x.id === item.id);
       this.$delete(this.cityWeatherItems, index);
       ItemsStorage.save(this.cityWeatherItems);
-      this.dialogDelete = false;
     },
   },
   created() {
     this.cityWeatherItems = ItemsStorage.get();
+    if (this.cityWeatherItems.length) {
+      this.inLocal = true;
+    }
   },
 };
 </script>
